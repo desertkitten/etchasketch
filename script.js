@@ -17,3 +17,4 @@ for (let i = 0; i < size * size; i++) {
 }
 
 // Change color on hover
+square.addEventListener("mousover", )
