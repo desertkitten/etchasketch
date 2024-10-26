@@ -8,7 +8,7 @@ function createGrid(size) {
     container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
     // Calculate the size of each square based on the container width
-    const squareSize = 930 / size;
+    const squareSize = 960 / size;
 
     for (let i = 0; i < size * size; i++) {
         const square = document.createElement("div");
