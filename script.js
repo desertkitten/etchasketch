@@ -25,8 +25,6 @@ function createGrid(size) {
     }
 }
 
-// Initial grid creation with default size
-createGrid(16);
 
 // Function to reset grid size
 function resetGrid() {
