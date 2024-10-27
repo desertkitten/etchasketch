@@ -43,4 +43,7 @@ function resetGrid() {
 }
 
 // Add event listener to reset button
-document.getElementById("reset-button").addEventListener("click", resetGrid);
+window.onload = function() {
+    document.getElementById("reset-button").addEventListener("click", resetGrid);
+    createGrid(16); // Call to create the initial grid
+};
