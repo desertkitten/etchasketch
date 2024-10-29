@@ -2,7 +2,11 @@ const container = document.getElementById('container');
 const resetButton = document.getElementById('resetButton');
 
 function createGrid(size) {
-    container.innerHTML = ''; // Clear existing grid
+    // Clear the container of any existing squares
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+
     const squareSize = 960 / size; // Calculate size for new squares
 
     for (let i = 0; i < size * size; i++) {
@@ -20,7 +24,7 @@ function createGrid(size) {
     }
 }
 
-// Initialize grid
+// Initialize grid with default size
 createGrid(16);
 
 // Reset button functionality
