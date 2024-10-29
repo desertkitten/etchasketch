@@ -5,30 +5,26 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
 }
 
-#reset-button {
+#resetButton {
     margin-bottom: 10px;
-    /* Space between button and grid */
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    z-index: 2;
 }
 
 #container {
-    display: grid;
-    /* Change this to grid to match gridTemplateColumns */
-    position: relative;
-    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
     width: 960px;
     height: 960px;
-    border: 1px solid #333;
+    border: 2px solid #000;
 }
 
 .square {
-    background-color: #fff;
+    border: 1px solid #ddd;
+    flex-grow: 1;
+    flex-basis: calc(960px / 16);
     box-sizing: border-box;
 }
