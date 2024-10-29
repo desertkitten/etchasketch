@@ -3,7 +3,7 @@ const resetButton = document.getElementById('resetButton');
 
 function createGrid(size) {
     container.innerHTML = ''; // Clear existing grid
-    const squareSize = 960 / size; // Calculate size for new squares
+    const squareSize = 760 / size; // Calculate size for new squares
 
     for (let i = 0; i < size * size; i++) {
         const square = document.createElement('div');
