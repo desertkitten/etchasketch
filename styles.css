@@ -21,8 +21,8 @@ body {
 #container {
     display: flex;
     flex-wrap: wrap;
-    width: 760px;
-    height: 760px;
+    width: 960px;
+    height: 960px;
     border: 2px solid #000;
     margin-top: 20px;
     /* Additional space to avoid overlap */
