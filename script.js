@@ -1,13 +1,13 @@
 const container = document.getElementById('container');
 const resetButton = document.getElementById('resetButton');
 
+// Function to create the grid based on the specified size
 function createGrid(size) {
-    // Clear the container of any existing squares
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-    }
+    // Clear the container by setting innerHTML to an empty string
+    container.innerHTML = '';
 
-    const squareSize = 960 / size; // Calculate size for new squares
+    // Calculate the size of each square
+    const squareSize = 960 / size;
 
     for (let i = 0; i < size * size; i++) {
         const square = document.createElement('div');
@@ -24,14 +24,16 @@ function createGrid(size) {
     }
 }
 
-// Initialize grid with default size
+// Initialize the grid with a default size of 16
 createGrid(16);
 
-// Reset button functionality
+// Add functionality to the reset button
 resetButton.addEventListener('click', () => {
     let size = parseInt(prompt('Enter new grid size (maximum 100):'));
 
-    if (size > 100) size = 100; // Limit grid size to 100
-    if (size && size > 0) createGrid(size);
-    else alert('Please enter a valid number between 1 and 100.');
+    if (!isNaN(size) && size > 0 && size <= 100) {
+        createGrid(size); // Generate a new grid with the specified size
+    } else {
+        alert('Please enter a valid number between 1 and 100.');
+    }
 });
