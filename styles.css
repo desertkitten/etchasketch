@@ -9,9 +9,13 @@ body {
 
 #resetButton {
     margin-bottom: 10px;
+    /* Spacing between the button and the grid */
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    position: relative;
+    /* Ensure button appears on top */
+    z-index: 1;
 }
 
 #container {
@@ -20,6 +24,8 @@ body {
     width: 960px;
     height: 960px;
     border: 2px solid #000;
+    margin-top: 20px;
+    /* Additional space to avoid overlap */
 }
 
 .square {
